@@ -10,5 +10,4 @@ jobs:
       - docker tag travis-ci-deploy-dockerhub-example $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example
       - docker push $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example
     - stage: test
-      script: docker run --rm $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example cat hello.txt
-    - script: docker run --rm $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example cat hello.txt
+      script: docker run --rm $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example
