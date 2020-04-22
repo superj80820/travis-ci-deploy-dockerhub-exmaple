@@ -6,7 +6,6 @@ jobs:
       script:
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - docker build -t travis-ci-deploy-dockerhub-example .
-      - docker images
       - docker tag travis-ci-deploy-dockerhub-example $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example
       - docker push $DOCKER_USERNAME/travis-ci-deploy-dockerhub-example
     - stage: test
